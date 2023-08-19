@@ -57,7 +57,7 @@ Submit.addEventListener("click", () => {
     FName.value == "" ||
     LName.value == "" ||
     Email.value == "" ||
-    !Email.value.includes("@.")
+    !Email.value.includes("@gmail.com")
   ) {
     alert("Please fill in the required fields");
   } else {
