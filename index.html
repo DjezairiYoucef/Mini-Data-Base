@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-DB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="icon" href="icons/icon1.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--! Header -->
+    <header>
+      <h1>Mini Data Base</h1>
+    </header>
+    <!--! Header -->
+
+    <!-- * section -->
+    <section>
+      <label for="First">First Name</label>
+      <input
+        type="text"
+        name=""
+        id="First"
+        placeholder="Enter your first name"
+      />
+      <label for="Last">Last Name</label>
+      <input type="text" name="" id="Last" placeholder="Enter your last name" />
+      <label for="Email">Email</label>
+      <input type="email" name="" id="Email" placeholder="Enter your email" />
+      <label for="search">search</label>
+      <input
+        type="search"
+        id="search"
+        placeholder="search by First Name"
+        onkeyup="Find(this.value)"
+      />
+      <button id="btn">create</button>
+    </section>
+    <!-- * section -->
+
+    <!-- ? show data -->
+    <div class="show-data">
+      <table border="1" id="table">
+        <!-- <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>Djezairi</td>
+          <td>youcef</td>
+          <td>Djezairiyoscef452@gmail.com</td>
+          <td class="btncont">
+            <button id="edit">Edit</button>
+            <button id="delete">Delete</button>
+          </td>
+        </tr> -->
+      </table>
+    </div>
+    <!-- ? show data -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
