@@ -65,15 +65,28 @@ section button {
   width: 100%;
 }
 .show-data table {
+  border-collapse: collapse;
   width: 100%;
 }
 .show-data th {
   padding: 10px 0;
   background: #111;
+  font-weight: medium;
+
+  letter-spacing: 0.35px;
+
+  border: 1px solid #dee2e685;
 }
 .show-data td {
   background-color: #1e1e1e;
   padding: 10px 5px;
+  letter-spacing: 0.35px;
+
+  font-weight: normal;
+
+  color: #f1f1f1;
+
+  border: 1px solid #dee2e685;
 }
 .show-data button {
   width: fit-content;
@@ -90,10 +103,10 @@ section button {
   -o-border-radius: 10px;
 }
 #delete {
-  background-color: rgb(227, 13, 13);
+  background-color: rgb(227, 13, 163);
 }
 #edit {
-  background-color: rgb(218, 218, 37);
+  background-color: rgb(227, 13, 163);
 }
 .btncont {
   display: flex;
@@ -131,26 +144,57 @@ section button {
     padding: 0 20px;
     width: 100%;
   }
+  thead,
+  thead tr,
+  thead th {
+    display: none;
+  }
+
+  tbody,
+  tbody td {
+    display: flex;
+    flex-direction: column;
+  }
+  td,
+  td {
+    width: 100%;
+    flex: 1;
+  }
   .show-data table {
-    width: fit-content;
+    width: 100%;
   }
   .btncont {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .show-data th {
     padding: 5px 0;
-    width: fit-content;
+    width: 100%;
     background: #111;
   }
   .show-data td {
     padding: 5px 5px;
-    min-height: 100px;
-    width: fit-content;
+    min-height: 50px;
+    width: 100%;
   }
+
+  tr {
+    margin-bottom: 20px;
+  }
+  td {
+    padding: 5px 10px;
+    text-align: right;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10;
+  }
+
   .show-data button {
-    width: fit-content;
+    width: 80px;
     padding: 5px 15px;
     cursor: pointer;
     border: 0;

@@ -28,23 +28,25 @@ let FakeI;
 
 function ShowData() {
   table.innerHTML = "";
-  table.innerHTML = ` <tr>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Email</th>
-  <th>Actions</th>
-</tr>`;
+  table.innerHTML = ` <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+</thead>`;
   let index = 0;
   for (col of ArrOfCols) {
-    let newRow = `  <tr>
-    <td>${col.FirstName}</td>
-    <td>${col.LastName}</td>
-    <td>${col.Email}</td>
+    let newRow = ` <tbody> <tr>
+    <td data-label="First Name">${col.FirstName}</td>
+    <td data-label="Last Name">${col.LastName}</td>
+    <td data-label="Email">${col.Email}</td>
     <td class="btncont">
       <button id="edit" onclick=EditElement(${index})>Edit</button>
       <button id="delete" onclick=DeleteElement(${index}) >Delete</button>
     </td>
-  </tr>`;
+  </tr></tbody>`;
     index++;
     table.innerHTML += newRow;
   }
@@ -127,15 +129,15 @@ function Find(valeur) {
 
   for (el of ArrOfCols) {
     if (el.FirstName.toLowerCase().includes(Search.value.toLowerCase())) {
-      let SearchRow = `  <tr>
-        <td>${el.FirstName}</td>
-        <td>${el.LastName}</td>
-        <td>${el.Email}</td>
+      let SearchRow = ` <tbody> <tr>
+        <td data-label="First Name">${el.FirstName}</td>
+        <td data-label="Last Name">${el.LastName}</td>
+        <td data-label="Email">${el.Email}</td>
         <td class="btncont">
           <button id="edit" onclick=EditElement(${index})>Edit</button>
           <button id="delete" onclick=DeleteElement(${index})>Delete</button>
         </td>
-      </tr>`;
+      </tr></tbody>`;
       table.innerHTML += SearchRow;
     }
     index++; // Increment the index
